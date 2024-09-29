@@ -1,14 +1,13 @@
 {
   "name": "task-app",
   "version": "0.0.0",
-  "homepage": "https://jhonatanBrr.github.io/task-app-angular",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "npm run build && gh-pages -d dist/task-app"
+    "deploy": "ng deploy --repo=https://github.com/jhonatanBrr/task-app-angular.git/ --name='jhonatan.berrios'"
   },
   "private": true,
   "dependencies": {
