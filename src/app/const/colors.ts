@@ -1,0 +1,1 @@
+export const colors = ['#319dfd']

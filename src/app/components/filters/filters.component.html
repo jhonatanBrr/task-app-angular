@@ -1,0 +1,6 @@
+<select name="" id="" [formControl]="stateInput">
+  <option value="" selected>TODOS</option>
+  @for(state of statusList; track state) {
+    <option [value]="state">{{state}}</option>
+  }
+</select>

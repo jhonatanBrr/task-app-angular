@@ -1,0 +1,11 @@
+<div class="list-bullet">
+    @for (n of name; track n; let index = $index) {
+        <div class="chip-content" [style.background-color]="getColor()">
+            <p>{{ n }}</p>
+            @if (deleteAction == true) {
+                <button (click)="deleteChip(index)" >x</button>
+            }
+        </div>
+    }
+
+</div>

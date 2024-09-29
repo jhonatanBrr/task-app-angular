@@ -1,0 +1,16 @@
+.flex {
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 20px;
+  width: 100%;
+}
+
+@media (max-width: 618px) {
+  .flex {
+    flex-wrap: wrap
+  }
+}
+
+.searcher {
+  width: 100%;
+}

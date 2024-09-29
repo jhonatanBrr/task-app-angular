@@ -1,0 +1,38 @@
+<div class="dialog-content">
+    <div>
+        <p class="dialog-title">Crear tarea</p>
+    </div>
+    <form [formGroup]="formTaskData">
+        <input id="name" placeholder="Nombre" type="text" formControlName="name">
+        <input id="due-date" placeholder="Fecha" type="date" formControlName="dueDate">
+        <select name="" id="" formControlName="status">
+            <option value="" selected>Selecciona un estado</option>
+            @for(state of statusList; track state) {
+                <option [value]="state">{{state}}</option>
+            }
+        </select>
+
+        <input list="options" placeholder="Asigna los colaboradores"
+            (change)="onSelectOption($event)">
+        <datalist id="options">
+            @for(user of availableUsers; track user.id) {
+                <option >{{user.name}}</option>
+            }
+        </datalist>
+
+        <app-bullets (onDelete)="removeOption($event)" [deleteAction]="true" [name]="selectedAssignedPeople" />
+
+
+        <input type="text" formControlName="skill" placeholder="Skill + Enter" (keydown.enter)="addSkill($event)">
+        <div class="bullets-content">
+            
+            <app-bullets (onDelete)="deleteSkill($event)" [deleteAction]="true" [name]="skills" />
+            
+        </div>
+
+        <div class="dialog-actions">
+            <app-button label="Cancelar" (onClick)="closeDialog()" />
+            <app-button label="Crear" (onClick)="createTask()" [disabled]="formTaskData.invalid" type="primary" />
+        </div>
+    </form>
+</div>

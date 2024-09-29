@@ -1,0 +1,21 @@
+<div class="dialog-content">
+    <div>
+        <p class="dialog-title">Crear Usuario</p>
+    </div>
+    <form [formGroup]="formUserData">
+        <input id="name" placeholder="Nombre" type="text" formControlName="name">
+        <input id="age" placeholder="Edad" type="number" formControlName="age">
+
+        <div class="bullets-content">
+            <input formControlName="skill" type="text" placeholder="Skill + Enter" (keydown.enter)="addSkill($event)">
+            <div>
+                <app-bullets [name]="skills" [deleteAction]="true" (onDelete)="deleteSkill($event)" />
+            </div>
+        </div>
+
+        <div class="dialog-actions">
+            <app-button label="Cancelar" (onClick)="closeDialog()" />
+            <app-button label="Crear" (onClick)="createUser()" [disabled]="formUserData.invalid" type="primary"/>
+        </div>
+    </form>
+</div>

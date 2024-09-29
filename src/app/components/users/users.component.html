@@ -1,0 +1,20 @@
+<div class="list-users">
+    @for (user of users; track user.id) {
+        <div class="user-content" (click)="openDialog(user)">
+            <div class="task-info">
+                <p><span>Nombre:</span> {{user.name}}</p>
+                <p><span>edad:</span> {{user.age}}</p>
+                <div class="flex">
+                    <span>Skills:</span> 
+                    <app-bullets [name]="user.skills" />
+                </div>
+            </div>
+
+            <div class="actions-list">
+                <button class="button-delete" (click)="deleteUser($event, user.id)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+        </div>   
+    }
+</div>

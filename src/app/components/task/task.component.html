@@ -1,0 +1,26 @@
+<div class="list-tasks">
+    @for (task of tasks; track task.id;) {
+        <div class="task-content" (click)="openDialog(task)">
+            <div class="task-info">
+                <p><span>Nombre:</span> {{task.name}}</p>
+                <p><span>fecha Limite: </span> 10/4/2003</p>
+                <div class="flex">
+                    <span>Personas asociadas: </span>
+                    <app-bullets [name]="task.assignedPeople" />
+                </div>
+                <p><span>Estado:</span> Activo</p>
+                <div class="flex">
+                    <span>tecnologias:</span> 
+                    <app-bullets [name]="task.technologies" />
+                </div>
+            </div>
+            <div class="actions-list">
+                <button class="button-delete" (click)="deleteTask($event, task.id)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+        </div>   
+    }
+</div>
+
+

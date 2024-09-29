@@ -1,0 +1,32 @@
+.list-bullet {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+p {
+  margin: 0;
+}
+
+.chip-content {
+  border-radius: var(--border-radius);
+  padding: 0px 10px;
+  height: 27px;
+  margin: 0;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.chip-content button {
+  border-radius: 50px;
+  text-align: center;
+  width: 16px;
+  height: 16px;
+  border: none;
+  background-color: var(--secondary-color);
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0px 1px 1px 1px;
+}

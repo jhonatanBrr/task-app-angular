@@ -1,0 +1,6 @@
+<div class="flex">
+    <app-searcher class="searcher" placeholder="Buscar tarea" (filter)="filterUsers($event)"/>
+    <app-filters (filter)="filterPerState($event)" />
+    <app-button label="Crear Tarea" type="primary" (onClick)="openDialog()"/>
+</div>
+<app-task />

@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --border-radius: 30px;
+  --body-color: #0f0f0f;
+  --primary-color: #34c759;
+  --secondary-color: #171d27;
+  --text-base-color: rgb(233, 233, 233);
+}
+
+* {
+  color: var(--text-base-color);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--body-color);
+  font-family: "Poppins", sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+input, select {
+  height: 50px;
+  border-radius: var(--border-radius);
+  border: none;
+  background-color: var(--secondary-color);
+  color: var(--text-base-color);
+  padding: 10px 20px;
+}
+
+select {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUCAMAAACtdX32AAAAdVBMVEUAAAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhMdQaAAAAJ3RSTlMAAAECAwQGBwsOFBwkJTg5RUZ4eYCHkJefpaytrsXGy8zW3+Do8vNn0bsyAAAAYElEQVR42tXROwJDQAAA0Ymw1p9kiT+L5P5HVEi3qJn2lcPjtIuzUIJ/rhIGy762N3XaThqMN1ZPALsZPEzG1x8LrFL77DHBnEMxBewz0fJ6LyFHTPL7xhwzWYrJ9z22AqmQBV757MHfAAAAAElFTkSuQmCC);
+  background-position: 100%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.mat-mdc-dialog-container .mdc-dialog__surface {
+  background-color: var(--secondary-color) !important;
+  padding: 1px !important;
+  border-radius: 30px !important;
+}

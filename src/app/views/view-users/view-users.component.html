@@ -1,0 +1,7 @@
+<section>
+    <div class="flex">
+        <app-searcher class="searcher" placeholder="Buscar usuario" (filter)="filterUsers($event)" />
+        <app-button label="Crear usuario" type="primary" (onClick)="openDialog()"/>
+    </div>
+    <app-users />
+</section>
