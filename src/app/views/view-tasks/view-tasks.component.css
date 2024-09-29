@@ -1,6 +1,6 @@
 .flex {
   display: flex;
-  /* flex-wrap: wrap; */
+  margin: 4px 0px;
   gap: 20px;
   width: 100%;
 }
