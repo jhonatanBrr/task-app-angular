@@ -74,7 +74,6 @@ export class FormUserComponent implements OnInit {
     const flag = this.validateNameAvailability(data)
     
     if (flag && !this.update) {
-      console.log('este nom,bre no se');
       this.dialog.open(AlertComponent, {
         data: {
           title: 'Atencion',
@@ -95,6 +94,7 @@ export class FormUserComponent implements OnInit {
     event.preventDefault(); 
     const skill = this.formUserData.controls['skill'].value
     this.skills.push(skill as string)
+    this.formUserData.controls['skill'].setValue('')
   }
 
   deleteSkill(index: number): void {

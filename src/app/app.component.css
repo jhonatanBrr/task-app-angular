@@ -17,12 +17,6 @@ section {
   }
 }
 
-/* @media (max-width: 665px) {
-  section {
-    padding: 20px 5%;
-  }
-} */
-
 .flex {
   display: flex;
   gap: 20px;

@@ -55,10 +55,7 @@ export class FormTaskComponent implements OnInit {
 
   deleteNonAvailableUsers() {
     this.deleteNonExistentUserseleteUsers();
-    // aca se guardas los usuarios seleccionados,es un array de Strrings
     this.selectedAssignedPeople
-
-    // aca se guardan las opciones del select esto es un array de UserInterface
     this.availableUsers = this.availableUsers.filter(_option => !this.selectedAssignedPeople.includes(_option.name))
 
   }
@@ -116,6 +113,7 @@ export class FormTaskComponent implements OnInit {
     event.preventDefault();
     const skill = this.formTaskData.controls['skill'].value;
     this.skills.push(skill as string)
+    this.formTaskData.controls['skill'].setValue('');
   }
 
   deleteSkill(index: number): void {
@@ -133,7 +131,6 @@ export class FormTaskComponent implements OnInit {
   }
 
   removeOption(index: any): void {
-    console.log(index);
     const user = this.selectedAssignedPeople[index];
     this.selectedAssignedPeople = this.selectedAssignedPeople.filter(_user => _user != user);
     const option: UserInterface = this.localStorageService.usersData.filter((_user) => _user.name === user)[0];

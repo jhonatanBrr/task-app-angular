@@ -25,3 +25,23 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Pasos para desplegar la aplicacion en gh-pages
+
+1. Limpieza del gh-pages
+
+npm run gh-pages-clean
+
+2. Configurar el package.json
+añade el siguiente script en tu archivo package.json para automatizar el proceso de despliegue:
+
+{
+  "scripts": {
+    "deploy": "npm run build && gh-pages -d dist/task-app"
+  }
+}
+
+npm run deploy
+
+3. desplegar:
+ng deploy --repo=https://github.com/jhonatanBrr/task-app-angular.git/ --name="jhonatan.berrios"
