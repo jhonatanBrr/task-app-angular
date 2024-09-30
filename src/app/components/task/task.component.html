@@ -3,7 +3,7 @@
         <div class="task-content" (click)="openDialog(task)">
             <div class="task-info">
                 <p><span>Nombre:</span> {{task.name}}</p>
-                <p><span>fecha Limite: </span> 10/4/2003</p>
+                <p><span>fecha Limite: </span> {{task.dueDate}}</p>
                 <div class="flex">
                     <span>Personas asociadas: </span>
                     <app-bullets [name]="task.assignedPeople" />

@@ -9,7 +9,6 @@ import { colors } from '../../../const/colors'
   styleUrl: './bullets.component.css'
 })
 export class BulletsComponent {
-  // name = input<String[]>()
   @Input() name: string[] = [];
   @Input() deleteAction: boolean = false;
   @Output() onDelete = new EventEmitter<number>();

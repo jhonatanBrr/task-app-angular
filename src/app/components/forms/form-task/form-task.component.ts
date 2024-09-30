@@ -57,7 +57,6 @@ export class FormTaskComponent implements OnInit {
     this.deleteNonExistentUserseleteUsers();
     this.selectedAssignedPeople
     this.availableUsers = this.availableUsers.filter(_option => !this.selectedAssignedPeople.includes(_option.name))
-
   }
 
   deleteNonExistentUserseleteUsers() {

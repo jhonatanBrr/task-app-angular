@@ -28,7 +28,7 @@ export class ViewTasksComponent {
     });
   }
 
-  filterUsers(name: string) {
+  filterTask(name: string) {
     this.localStorageService.setFiltersTask(name)
   }
 
